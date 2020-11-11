@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import moviesTitles from './data/movies.json';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routes';
 
 function App() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(()=>{
-    setMovies(moviesTitles);
-  },[])
-
   return (
-    <ul>
-      {movies.map(item => (
-        <li key={item.id}>
-          {item.titulo}
-        </li>
-      ))}
-    </ul>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
