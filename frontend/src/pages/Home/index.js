@@ -9,6 +9,11 @@ import Card from '../../components/Card';
 
 export default function Home() {
     const [movies, setMovies] = useState([]);
+    const [selectedMovies, setSelectedMovies] = useState([]);
+
+    const handleGenerateChampionship = () => {
+        console.log("chama a API!");
+    }
 
     useEffect(() => {
         setMovies(moviesTitles);
@@ -26,7 +31,7 @@ export default function Home() {
             </div>
             <div className="container-events">
                 <Selection selecteds="0" total="8" />
-                <Button title="Gerar Meu Campeonato" />
+                <Button title="Gerar Meu Campeonato" handleFunction={handleGenerateChampionship} />
             </div>
             <div className="container-list">
                 {movies.map(item => (
