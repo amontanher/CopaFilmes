@@ -1,0 +1,17 @@
+.container-card {
+  border-radius: 3px;
+  border: 1px solid gray;
+  width: 200px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
