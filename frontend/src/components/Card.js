@@ -1,12 +1,16 @@
 import React from 'react';
 import '../styles/Card.css';
 
-export default function Card({ title, year }) {
+export default function Card({ title, year, handleFunction, isChecked }) {
     return (
         <>
             <div className="container-card">
                 <div className="container-check">
-                    <p>Check</p>
+                    <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={handleFunction}
+                    />
                 </div>
                 <div className="container-detail">
                     <h5>{title}</h5>

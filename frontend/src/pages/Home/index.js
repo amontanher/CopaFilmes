@@ -15,6 +15,13 @@ export default function Home() {
         console.log("chama a API!");
     }
 
+    //https://codesandbox.io/s/react-hooks-usestate-xzvq5?file=/src/index.js:583-593
+
+    const handleCheckboxChange = (event) => {
+        setSelectedMovies({ ...selectedMovies, [event.target.name]: event.target.checked });
+        console.log("cliquei cehkbox");
+    }
+
     useEffect(() => {
         setMovies(moviesTitles);
     }, [])
@@ -35,7 +42,7 @@ export default function Home() {
             </div>
             <div className="container-list">
                 {movies.map(item => (
-                    <Card key={item.id} title={item.titulo} year={item.ano} />
+                    <Card key={item.id} title={item.titulo} year={item.ano} handleFunction={handleCheckboxChange} />
                 ))}
             </div>
         </div>
