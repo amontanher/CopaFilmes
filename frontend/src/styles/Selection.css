@@ -1,0 +1,12 @@
+.select-container{
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin: 5px 0;
+}

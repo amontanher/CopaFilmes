@@ -1,0 +1,14 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6a9af;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+h1,
+h4,
+h5 {
+  padding: 10px;
+}
