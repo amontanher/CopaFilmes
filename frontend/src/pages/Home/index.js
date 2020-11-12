@@ -15,14 +15,13 @@ export default function Home() {
     console.log("chama a API!");
   };
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event, item) => {
     const isChecked = event.target.checked;
-    const titleId = event.target.value;
 
     if (isChecked) {
-      setSelectedMovies([...selectedMovies, titleId]);
+      setSelectedMovies([...selectedMovies, item]);
     } else {
-      const titleIndex = selectedMovies.indexOf(titleId);
+      const titleIndex = selectedMovies.indexOf(item);
       selectedMovies.splice(titleIndex, 1);
     }
   };
@@ -57,6 +56,7 @@ export default function Home() {
             id={item.id}
             title={item.titulo}
             year={item.ano}
+            item={item}
             handleFunction={handleCheckboxChange}
           />
         ))}

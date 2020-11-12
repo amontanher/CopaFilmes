@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/Card.css";
 
-export default function Card({ id, title, year, handleFunction, isChecked }) {
+export default function Card({
+  item,
+  id,
+  title,
+  year,
+  handleFunction,
+  isChecked,
+}) {
   return (
     <>
       <div className="container-card">
@@ -9,7 +16,7 @@ export default function Card({ id, title, year, handleFunction, isChecked }) {
           <input
             type="checkbox"
             checked={isChecked}
-            onChange={handleFunction}
+            onChange={(e) => handleFunction(e, item)}
             value={id}
           />
         </div>
