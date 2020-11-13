@@ -8,7 +8,10 @@ export default function Card({
   year,
   handleFunction,
   isChecked,
+  totalSelected,
+  totalMovies
 }) {
+  const disable = totalSelected === totalMovies ? true : false;
   return (
     <>
       <div className="container-card">
@@ -18,6 +21,7 @@ export default function Card({
             checked={isChecked}
             onChange={(e) => handleFunction(e, item)}
             value={id}
+            disabled={disable}
           />
         </div>
         <div className="container-detail">

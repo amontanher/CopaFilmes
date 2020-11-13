@@ -8,11 +8,14 @@ import Selection from "../../components/Selection";
 import Card from "../../components/Card";
 
 export default function Home() {
+  const [total, setTotal] = useState(0);
   const [movies, setMovies] = useState([]);
+  const [totalMovies] = useState(8);
   const [selectedMovies, setSelectedMovies] = useState([]);
+  const [enableGenerateButton, setEnableGenerateButton] = useState(false);
 
   const handleGenerateChampionship = () => {
-    console.log("chama a API!");
+    console.log(selectedMovies);
   };
 
   const handleCheckboxChange = (event, item) => {
@@ -20,11 +23,23 @@ export default function Home() {
 
     if (isChecked) {
       setSelectedMovies([...selectedMovies, item]);
+      setTotal(total => total + 1);
     } else {
       const titleIndex = selectedMovies.indexOf(item);
       selectedMovies.splice(titleIndex, 1);
+
+      setTotal(total => total - 1);
     }
+
+    enableButton();
   };
+
+  const enableButton = () => {
+    if (total === 8)
+      setEnableGenerateButton(true);
+    else
+      setEnableGenerateButton(false);
+  }
 
   useEffect(() => {
     setMovies(moviesTitles);
@@ -32,6 +47,7 @@ export default function Home() {
 
   return (
     <div className="container">
+
       <div>
         <Banner
           title="Fase de Seleção"
@@ -42,13 +58,15 @@ export default function Home() {
                 para prosseguir."
         />
       </div>
+
       <div className="container-events">
-        <Selection selecteds="0" total="8" />
-        <Button
+        <Selection selecteds={total} total={totalMovies} />
+        {enableGenerateButton && <Button
           title="Gerar Meu Campeonato"
           handleFunction={handleGenerateChampionship}
-        />
+        />}
       </div>
+
       <div className="container-list">
         {movies.map((item) => (
           <Card
@@ -57,6 +75,8 @@ export default function Home() {
             title={item.titulo}
             year={item.ano}
             item={item}
+            totalSelected={total}
+            totalMovies={totalMovies}
             handleFunction={handleCheckboxChange}
           />
         ))}
