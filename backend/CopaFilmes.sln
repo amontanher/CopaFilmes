@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilmes.API", "CopaFilmes.API\CopaFilmes.API.csproj", "{880B2A73-B552-4868-B6F4-9A7D9F1BD884}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopaFilmes.API", "CopaFilmes.API\CopaFilmes.API.csproj", "{880B2A73-B552-4868-B6F4-9A7D9F1BD884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilmes.Domain", "CopaFilmes.Domain\CopaFilmes.Domain.csproj", "{BA4AE62E-B746-414E-90D3-A85D25B1ACC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilmes.Domain.Entities", "CopaFilmes.Domain.Entities\CopaFilmes.Domain.Entities.csproj", "{95588D96-DED7-41BA-90DE-EB2EA4B434B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaFilmes.Infra.CrossCutting", "CopaFilmes.Infra.CrossCutting\CopaFilmes.Infra.CrossCutting.csproj", "{1D352185-7643-42B1-A0B6-807F58C67C1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{880B2A73-B552-4868-B6F4-9A7D9F1BD884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{880B2A73-B552-4868-B6F4-9A7D9F1BD884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{880B2A73-B552-4868-B6F4-9A7D9F1BD884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4AE62E-B746-414E-90D3-A85D25B1ACC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4AE62E-B746-414E-90D3-A85D25B1ACC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4AE62E-B746-414E-90D3-A85D25B1ACC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4AE62E-B746-414E-90D3-A85D25B1ACC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95588D96-DED7-41BA-90DE-EB2EA4B434B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95588D96-DED7-41BA-90DE-EB2EA4B434B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95588D96-DED7-41BA-90DE-EB2EA4B434B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95588D96-DED7-41BA-90DE-EB2EA4B434B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D352185-7643-42B1-A0B6-807F58C67C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D352185-7643-42B1-A0B6-807F58C67C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D352185-7643-42B1-A0B6-807F58C67C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D352185-7643-42B1-A0B6-807F58C67C1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

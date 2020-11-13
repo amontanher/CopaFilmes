@@ -1,0 +1,9 @@
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\bin\Debug\netcoreapp3.1\CopaFilmes.Domain.deps.json
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\bin\Debug\netcoreapp3.1\CopaFilmes.Domain.dll
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\bin\Debug\netcoreapp3.1\CopaFilmes.Domain.pdb
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.csprojAssemblyReference.cache
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.AssemblyInfoInputs.cache
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.AssemblyInfo.cs
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.dll
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.pdb
