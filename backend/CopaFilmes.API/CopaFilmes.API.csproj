@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CopaFilmes.Domain.Entities\CopaFilmes.Domain.Entities.csproj" />
+    <ProjectReference Include="..\CopaFilmes.Domain\CopaFilmes.Domain.csproj" />
+  </ItemGroup>
+
+
+</Project>
