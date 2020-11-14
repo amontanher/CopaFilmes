@@ -18,6 +18,7 @@ namespace CopaFilmes.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            Infra.CrossCutting.ConfigureServices.RegisterInstances();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

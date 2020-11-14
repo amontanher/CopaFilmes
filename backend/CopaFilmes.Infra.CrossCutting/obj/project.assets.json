@@ -1,11 +1,78 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "CopaFilmes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CopaFilmes.Domain.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CopaFilmes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CopaFilmes.Domain.dll": {}
+        }
+      },
+      "CopaFilmes.Domain.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CopaFilmes.Domain.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CopaFilmes.Domain.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "sha512": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "CopaFilmes.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CopaFilmes.Domain/CopaFilmes.Domain.csproj",
+      "msbuildProject": "../CopaFilmes.Domain/CopaFilmes.Domain.csproj"
+    },
+    "CopaFilmes.Domain.Entities/1.0.0": {
+      "type": "project",
+      "path": "../CopaFilmes.Domain.Entities/CopaFilmes.Domain.Entities.csproj",
+      "msbuildProject": "../CopaFilmes.Domain.Entities/CopaFilmes.Domain.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "CopaFilmes.Domain >= 1.0.0",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 5.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Ale\\.nuget\\packages\\": {},
@@ -41,7 +108,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ale\\Desktop\\GIT\\CopaFilmes\\backend\\CopaFilmes.Domain\\CopaFilmes.Domain.csproj": {
+              "projectPath": "C:\\Users\\Ale\\Desktop\\GIT\\CopaFilmes\\backend\\CopaFilmes.Domain\\CopaFilmes.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -53,6 +124,12 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
