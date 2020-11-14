@@ -7,7 +7,7 @@ namespace CopaFilmes.Domain.Championship.Services
     {
         public ChampionshipResult Run()
         {
-            throw new System.NotImplementedException();
+            return new ChampionshipResult { Position = 1, Title = "Title" };
         }
     }
 }
