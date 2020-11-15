@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+
 namespace CopaFilmes.Domain.Entities
 {
     public class Movie
