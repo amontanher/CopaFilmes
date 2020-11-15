@@ -19,19 +19,17 @@ export default function Home() {
 
     if (isChecked) {
       setSelectedMovies([...selectedMovies, item]);
-      setTotal(total => total + 1);
+      setTotal(total + 1);
     } else {
       const titleIndex = selectedMovies.indexOf(item);
       selectedMovies.splice(titleIndex, 1);
 
-      setTotal(total => total - 1);
+      setTotal(total - 1);
     }
-
-    enableButton();
   };
 
   const enableButton = () => {
-    if (total === 8)
+    if (total === totalMovies)
       setEnableGenerateButton(true);
     else
       setEnableGenerateButton(false);
@@ -39,7 +37,8 @@ export default function Home() {
 
   useEffect(() => {
     setMovies(moviesTitles);
-  }, []);
+    enableButton();
+  }, [total]);
 
   return (
     <div className="container">
