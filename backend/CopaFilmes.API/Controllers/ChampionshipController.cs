@@ -1,5 +1,5 @@
-﻿using CopaFilmes.Domain.Championship.Interfaces;
-using CopaFilmes.Domain.Championship.Services;
+﻿using CopaFilmes.Domain.Interfaces;
+using CopaFilmes.Domain.Services;
 using CopaFilmes.Domain.Entities;
 using CopaFilmes.Infra.CrossCutting;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +13,9 @@ namespace CopaFilmes.API.Controllers
     {
         IChampionshipService _service;
 
-        public ChampionshipController()
+        public ChampionshipController(IChampionshipService service)
         {
-            _service = ServiceLocators.Get<IChampionshipService>(nameof(ChampionshipService));
+            _service = service;
         }
 
         [HttpPost]

@@ -1,7 +1,7 @@
 ﻿using CopaFilmes.Domain.Entities;
 using System.Collections.Generic;
 
-namespace CopaFilmes.Domain.Championship.Interfaces
+namespace CopaFilmes.Domain.Interfaces
 {
     public interface IChampionshipService
     {
