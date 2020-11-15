@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0/TTG12Jb8ySWX3aDynJdqE6z5cVLqVgYhKGd/qUidRPTAY+OiUfb5u9xWtIuKTU4rrk/xRfujO313xEMC9Xdg==",
+  "dgSpecHash": "pRCKyPDQcb7E/L7iXN1SrXuiAxJlZTdF3lwwMcnT4MiV5Ix+4ZR6eVrkkf+W7yG0iYKh8pnWLsNYOZBTjCEMIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ale\\Desktop\\GIT\\CopaFilmes\\backend\\CopaFilmes.Infra.CrossCutting\\CopaFilmes.Infra.CrossCutting.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ale\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
     "C:\\Users\\Ale\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []

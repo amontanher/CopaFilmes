@@ -1,3 +1,4 @@
+using CopaFilmes.Infra.CrossCutting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,7 +19,7 @@ namespace CopaFilmes.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            Infra.CrossCutting.ConfigureServices.RegisterInstances();
+            services.AddServiceDependency();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
