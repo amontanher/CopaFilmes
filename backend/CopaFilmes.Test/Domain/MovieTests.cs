@@ -41,7 +41,7 @@ namespace CopaFilmes.Test.Domain
         }
 
         [Test]
-        public void Test()
+        public void SortTitlesByAlphabeticalOrder()
         {
             var result = Movie.SortTitlesByAlphabeticalOrder(_movies).ToList();
 

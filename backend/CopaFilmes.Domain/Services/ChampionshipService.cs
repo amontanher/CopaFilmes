@@ -7,7 +7,7 @@ namespace CopaFilmes.Domain.Services
 {
     public class ChampionshipService : IChampionshipService
     {
-        IMatchService _matchService;
+        readonly IMatchService _matchService;
 
         public ChampionshipService(IMatchService matchService)
         {
@@ -15,7 +15,7 @@ namespace CopaFilmes.Domain.Services
         }
 
         public List<ChampionshipResult> Run(IEnumerable<Movie> movies)
-        {
+        {            
             movies = Movie.SortTitlesByAlphabeticalOrder(movies).ToList();
 
             return RunChampionshipPhases(movies);
@@ -30,10 +30,10 @@ namespace CopaFilmes.Domain.Services
             return StartCurrentChampionshipFinalMatch(semiFinalsRound);            
         }
 
-        private List<ChampionshipResult> StartCurrentChampionshipFinalMatch(List<Movie> semiFinalsRound)
+        public List<ChampionshipResult> StartCurrentChampionshipFinalMatch(List<Movie> semiFinalsRound)
         {
             var winner = _matchService.PlayMatch(semiFinalsRound);
-            var runnerUp = semiFinalsRound.First(f => f.Id != winner.Id);
+            var runnerUp = semiFinalsRound.First(f => f.Titulo != winner.Titulo);
 
             return new List<ChampionshipResult>
             {

@@ -16,6 +16,8 @@ namespace CopaFilmes.Test
         List<Movie> _quarterFinalsMovies;
         List<Movie> _semiFinalsMovies;
 
+        List<ChampionshipResult> _championshipResult;
+
         IChampionshipService _service;
 
         Mock<IMatchService> _matchService;
@@ -67,6 +69,12 @@ namespace CopaFilmes.Test
                 new Movie{Id = "tt3606756", Titulo = "Os Incríveis 2", Ano = 2018, Nota = 8.5},
             };
 
+            _championshipResult = new List<ChampionshipResult>
+            {
+                new ChampionshipResult { Position = 1, Title = "Vingadores: Guerra Infinita"},
+                new ChampionshipResult { Position = 2, Title = "Os Incríveis 2"},
+            };
+
             _matchService.Setup(s => s.PlayMatch(It.IsAny<List<Movie>>())).Returns(_allMoviesOrdered[7]);
         }
 
@@ -95,6 +103,18 @@ namespace CopaFilmes.Test
 
             Assert.That(result, Has.Exactly(2).Items);
             Assert.AreEqual(_allMoviesOrdered[7].Titulo, result[0].Titulo);
+        }
+
+        [Test]
+        public void StartCurrentChampionshipFinalMatch_WhenFinalRound_ShouldReturnChampionshipResult()
+        {
+            var result = _service.StartCurrentChampionshipFinalMatch(_semiFinalsMovies);
+            
+            Assert.That(result, Has.Exactly(1).Matches<ChampionshipResult>(m => m.Position == _championshipResult[0].Position));
+            Assert.That(result, Has.Exactly(1).Matches<ChampionshipResult>(m => m.Title == _championshipResult[0].Title));
+
+            Assert.That(result, Has.Exactly(1).Matches<ChampionshipResult>(m => m.Position == _championshipResult[1].Position));
+            Assert.That(result, Has.Exactly(1).Matches<ChampionshipResult>(m => m.Title == _championshipResult[1].Title));
         }
     }
 }
