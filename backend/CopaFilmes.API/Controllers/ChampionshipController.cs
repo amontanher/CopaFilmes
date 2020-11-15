@@ -20,9 +20,10 @@ namespace CopaFilmes.API.Controllers
 
         [HttpPost]
         [Route("")]
-        public ActionResult<ChampionshipResult> GenerateChampionship([FromBody] List<Movie> movies)
-        {           
-            return Ok(_service.Run());
+        public ActionResult<ChampionshipResult> GenerateChampionship([FromBody] IEnumerable<Movie> movies)
+        {
+            var championshipResult = _service.Run(movies);
+            return Ok(championshipResult);
         }
     }
 }

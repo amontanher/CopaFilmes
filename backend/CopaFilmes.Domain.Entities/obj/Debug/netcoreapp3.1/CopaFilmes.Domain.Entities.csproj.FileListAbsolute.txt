@@ -4,6 +4,6 @@ C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\bin\Debug
 C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.csprojAssemblyReference.cache
 C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.AssemblyInfoInputs.cache
 C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.AssemblyInfo.cs
-C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.csproj.CoreCompileInputs.cache
 C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.dll
 C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.pdb
+C:\Users\Ale\Desktop\GIT\CopaFilmes\backend\CopaFilmes.Domain.Entities\obj\Debug\netcoreapp3.1\CopaFilmes.Domain.Entities.csproj.CoreCompileInputs.cache

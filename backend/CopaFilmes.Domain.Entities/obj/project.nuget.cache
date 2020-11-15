@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5HENEW7zGmhdR1eQ/LbYxrWf8QUcSCwfPJ5wdKlG2Cqef4pOgu0+t7x3RP0RkcWGK8Dl94FgatoIBg88G97WAQ==",
+  "dgSpecHash": "K+n8t9/g6t5lpckBbGJB1qRhaIeizIv2tfzGXvZ+uSIytgmVs5fnVwlz5G+996WBj9p26RMH16W9Dn0wC/N/fw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ale\\Desktop\\GIT\\CopaFilmes\\backend\\CopaFilmes.Domain.Entities\\CopaFilmes.Domain.Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ale\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512"
+  ],
   "logs": []
 }
