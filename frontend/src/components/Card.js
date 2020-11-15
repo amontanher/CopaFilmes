@@ -11,7 +11,7 @@ export default function Card({
   totalSelected,
   totalMovies
 }) {
-  const disable = totalSelected === totalMovies+1 ? true : false;
+  const disable = totalSelected === totalMovies + 1 ? true : false;
   return (
     <>
       <div className="container-card">

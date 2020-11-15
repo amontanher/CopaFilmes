@@ -8,7 +8,10 @@
 }
 
 body {
-  background-color: #f8f8f6;
+  /* background-color: #f8f8f6; */
+  background: url(assets/bg-cinema.png) no-repeat;
+  background-size: cover;
+
   margin: 20px 0 0 20px;
   font-family: 'Raleway', sans-serif;
 }
@@ -18,7 +21,6 @@ body {
   width: 950px;
   height: 650px;
   background-color: white;
-  border: 1px solid lightgray;
   border-radius: 10px;
   overflow: auto;
 }
