@@ -14,24 +14,32 @@ namespace CopaFilmes.Domain.Services
             _matchService = matchService;
         }
 
-        public ChampionshipResult Run(IEnumerable<Movie> movies)
+        public List<ChampionshipResult> Run(IEnumerable<Movie> movies)
         {
             movies = Movie.SortTitlesByAlphabeticalOrder(movies).ToList();
 
-            var championshipResult = RunChampionshipPhases(movies);
-
-            return new ChampionshipResult { Position = 1, Title = "Title" };
+            return RunChampionshipPhases(movies);
         }
 
-        public List<Movie> RunChampionshipPhases(IEnumerable<Movie> movies)
+        public List<ChampionshipResult> RunChampionshipPhases(IEnumerable<Movie> movies)
         {
             var quarterFinalsRoundResult = StartCurrentChampionshipPhase(movies.ToList());
 
             var semiFinalsRound = StartCurrentChampionshipPhase(quarterFinalsRoundResult);
 
-            var finalRoundResult = StartCurrentChampionshipPhase(semiFinalsRound);
+            return StartCurrentChampionshipFinalMatch(semiFinalsRound);            
+        }
 
-            return finalRoundResult;
+        private List<ChampionshipResult> StartCurrentChampionshipFinalMatch(List<Movie> semiFinalsRound)
+        {
+            var winner = _matchService.PlayMatch(semiFinalsRound);
+            var runnerUp = semiFinalsRound.First(f => f.Id != winner.Id);
+
+            return new List<ChampionshipResult>
+            {
+                new ChampionshipResult{Position = 1, Title = winner.Titulo},
+                new ChampionshipResult{Position = 2, Title = runnerUp.Titulo}
+            };
         }
 
         public List<Movie> StartCurrentChampionshipPhase(List<Movie> movies)
