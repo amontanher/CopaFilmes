@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../../styles/Home.css";
 import moviesTitles from "../../data/movies.json";
 
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
 import Selection from "../../components/Selection";
 import Card from "../../components/Card";
 
 export default function Home() {
+  const [totalMovies] = useState(8);
   const [total, setTotal] = useState(0);
   const [movies, setMovies] = useState([]);
-  const [totalMovies] = useState(8);
   const [selectedMovies, setSelectedMovies] = useState([]);
   const [enableGenerateButton, setEnableGenerateButton] = useState(false);
-
-  const handleGenerateChampionship = () => {
-    console.log(selectedMovies);
-  };
 
   const handleCheckboxChange = (event, item) => {
     const isChecked = event.target.checked;
@@ -61,10 +57,11 @@ export default function Home() {
 
       <div className="container-events">
         <Selection selecteds={total} total={totalMovies} />
-        {enableGenerateButton && <Button
-          title="Gerar Meu Campeonato"
-          handleFunction={handleGenerateChampionship}
-        />}
+        {enableGenerateButton &&
+          <Link to={{ pathname: "/result", state: selectedMovies }}>
+            Gerar Meu Campeonato
+          </Link>
+        }
       </div>
 
       <div className="container-list">
