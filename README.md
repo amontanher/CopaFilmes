@@ -1,6 +1,13 @@
 # CopaFilmes
 
-# 1) Getting Started with CopaFilmes Frontend Project
+# 1) Clone repository
+
+```
+$ git clone https://github.com/amontanher/CopaFilmes.git
+$ cd CopaFilmes
+```
+
+# 2) Getting Started with CopaFilmes Frontend Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To install all project package dependencies, in the project directory, you can run:
 
 ```
-yarn install
+$ yarn install
 ```
 
 ## Start the frontend app
@@ -17,12 +24,12 @@ yarn install
 Once the dependencies are ok, you can run the command
 
 ```
-yarn start
+$ yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-# 2) Getting Started with CopaFilmes Backend Project
+# 3) Getting Started with CopaFilmes Backend Project
 
 ## Tests
 
