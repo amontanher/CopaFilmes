@@ -35,7 +35,13 @@ export default function Home() {
       setEnableGenerateButton(false);
   }
 
+  const getMovies = async () => {
+    const url = "http://copafilmes.azurewebsites.net/api/filmes";
+    fetch(url, { mode: 'cors' }).then(r => console.log(r.data));
+  }
+
   useEffect(() => {
+    getMovies();
     setMovies(moviesTitles);
     enableButton();
   }, [total]);
