@@ -29,16 +29,20 @@ export default function Home() {
   };
 
   const enableButton = () => {
-    if (total === totalMovies)
-      setEnableGenerateButton(true);
-    else
-      setEnableGenerateButton(false);
-  }
+    if (total === totalMovies) setEnableGenerateButton(true);
+    else setEnableGenerateButton(false);
+  };
 
   const getMovies = async () => {
-    const url = "http://copafilmes.azurewebsites.net/api/filmes";
-    fetch(url, { mode: 'cors' }).then(r => console.log(r.data));
-  }
+    // var myHeaders = new Headers();
+    // myHeaders.append("")
+    // var myInit = { method: "GET", headers: myHeaders, mode: "no-cors" };
+    // const url = "http://copafilmes.azurewebsites.net/api/filmes";
+    // fetch(url, myInit).then((r) => console.log(r));
+    // fetch(url, {
+    //   mode: "no-cors"
+    // }).then((r) => console.log(r));
+  };
 
   useEffect(() => {
     getMovies();
@@ -48,7 +52,6 @@ export default function Home() {
 
   return (
     <div className="container">
-
       <div>
         <Banner
           title="Fase de Seleção"
@@ -62,11 +65,11 @@ export default function Home() {
 
       <div className="container-events">
         <Selection selecteds={total} total={totalMovies} />
-        {enableGenerateButton &&
+        {enableGenerateButton && (
           <Link to={{ pathname: "/result", state: selectedMovies }}>
             Gerar Meu Campeonato
           </Link>
-        }
+        )}
       </div>
 
       <div className="container-list">
