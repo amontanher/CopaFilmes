@@ -13,7 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Run
 
-To install all project package dependencies, in the project directory, you can run:
+To install all project package dependencies, in the project directory (frontend folder), you can run:
 
 ```
 $ yarn install
@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Tests
 
-To run all unit tests, in the project directory, you can run
+To run all unit tests, in the project directory (backend folder), you can run
 
 ```
 $ dotnet test
