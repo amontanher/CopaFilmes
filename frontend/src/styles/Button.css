@@ -1,3 +1,11 @@
+.notfound-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
 a {
   background-color: lightgray;
   border: none;

@@ -6,9 +6,9 @@ export default function Banner({ title, description, project }) {
         <>
             <div className="box">
                 <div>
-                    <h4>{project}</h4>
-                    <h1>{title}</h1>
-                    <h5>{description}</h5>
+                    <h4 id="h-pad">{project}</h4>
+                    <h1 id="h-pad">{title}</h1>
+                    <h5 id="h-pad">{description}</h5>
                 </div>
             </div>
         </>
